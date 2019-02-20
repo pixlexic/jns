@@ -1,0 +1,309 @@
+.homeBoxBg {
+    position: absolute;
+    min-height: 700px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.home_top {
+    height: 120px;
+}
+
+.homeBoxTop {
+    display: flex;
+    position: absolute;
+    /*flex-direction: column;*/
+    /* background-image: url(/images/vvv.png);*/
+    background-position: center;
+    background-size: cover;
+    top: 120px;
+    bottom: 40%;
+    width: 100%;
+    max-height: 500px;
+    min-height: 300px;
+    overflow: auto;
+}
+
+.homeBoxBot {
+    position: absolute;
+    /*flex-direction: column;*/
+    /* background-image: url(/images/vvv.png);*/
+    background-position: center;
+    background-size: cover;
+    top: 61%;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    /*max-height: 200px;*/
+    min-height: 100px;
+    overflow: auto;
+    background-color: #cccccc;
+}
+
+.homeBoxBotCon {
+    background-color: #d6d6d6;
+    box-shadow: 0px 1px 19px 0px #afafaf;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    max-width: 800px;
+}
+
+.homeBoxBotcopyr {
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    padding: 6px;
+}
+
+
+
+
+
+.homebotTitle {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.homebotinfoCon {
+display:flex;
+padding: 15px;
+}
+
+.homebotinfo {
+    flex: 1 1 auto;
+    color: #636363;
+    text-align: left;
+}
+
+.homeBoxTopIn {
+    position: relative;
+    flex: 1 1 auto;
+    /* background-color: rgba(0, 0, 0, 0.034); */
+    padding: 10px;
+    margin: 3px;
+    min-height: 120px;
+    color: #1c6e77;
+    overflow: auto;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: background-size 1s;
+    overflow: hidden;
+}
+
+.homeBoxTopIn:hover {
+    background-size: 110%;
+    transition: background-size 1s;
+}
+
+.homeBox {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    top: 400px;
+    width: 100%;
+    overflow: auto;
+}
+
+.homeBoxIn {
+    position: relative;
+    flex: 1 1 auto;
+    /*  background-color: rgba(0, 0, 0, 0.1);*/
+    padding: 10px;
+    margin: 10px;
+    min-height: 120px;
+    overflow: auto;
+}
+
+.homeInTitle {
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.homeInTitleText {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+.homeInTitleText:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 1s;
+}
+
+.homeInBottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 16px;
+   /* height: 25%; */
+    z-index: 999;
+    background-color:  rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+   /* box-shadow: 3px 3px 40px #000000;*/
+}
+
+
+.homeInTop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    font-size: 16px;
+    height: 25%;
+    z-index: 999;
+    background-color:  #ffffff;
+    color: #000000;
+   /* box-shadow: 3px 3px 40px #000000;*/
+}
+
+
+
+
+.homeItemTitle {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.homeItemBox {
+    /*	position: absolute; */
+    /*  background-color: rgba(0, 0, 0, 0.1);*/
+    /*	right: 10px; */
+    min-width: 100px;
+    min-height: 100px;
+    margin: 10px;
+    padding: 6px;
+}
+
+
+
+
+.homeWebgl {
+
+    position: absolute;
+    z-index: 9999;
+    height: 50px;
+    width: 75px;
+    bottom: 10px;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .copyr {
+        position: relative;
+        padding: 6px;
+    }
+    .home_top {
+        height: 60px;
+    }
+    .homeBox {
+        display: block;
+    }
+    .homeBoxBg {
+        position: relative;
+        min-height: 0px;
+    }
+    .homeBoxBot {
+        position: relative;
+        /*flex-direction: column;*/
+        /* background-image: url(/images/vvv.png);*/
+        background-position: center;
+        background-size: cover;
+        padding: 24px;
+        /*max-height: 200px;*/
+        min-height: 100px;
+        overflow: hidden;
+        background-color: #cccccc;
+    }
+    .homeItemBox {
+        position: relative;
+        right: 0px;
+        min-width: 100px;
+        min-height: 100px;
+    }
+    .homeBoxTop {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        top: 0px;
+        bottom: 20px;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow: initial;
+       
+    }
+    .homeBoxTopIn {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 10px;
+        margin: 10px;
+        min-height: 300px;
+        overflow: hidden;
+    }
+
+
+    .homeBoxBot {
+        position: relative;
+        /*flex-direction: column;*/
+        /* background-image: url(/images/vvv.png);*/
+        background-position: center;
+        background-size: cover;
+
+        padding: 24px;
+        /*max-height: 200px;*/
+        min-height: 100px;
+        overflow: auto;
+        background-color: #cccccc;
+    }
+
+
+    .homeBoxBotCon {
+        background-color: #d6d6d6;
+        box-shadow: 0px 1px 19px 0px #afafaf;
+        position: relative;
+        width: 100%;
+        height: inherit;
+        max-width: 800px;
+    }
+
+    .homebotinfoCon {
+        display:flex;
+        padding: 15px;
+        position: relative;
+        flex-direction: column;
+        }
+        
+        .homebotinfo {
+            flex: 1 1 auto;
+            color: #636363;
+            text-align: left;
+        }
+
+
+}

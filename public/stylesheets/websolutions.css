@@ -1,0 +1,49 @@
+.websol_top {
+    height: 120px;
+}
+
+.websol_txt {
+    flex: 0 0 auto;
+    min-height: 200px;
+    width: 400px;
+    text-align: left;
+    padding: 12px;
+}
+
+.websol_img {
+    flex: 1 0 auto;
+    height: 200px;
+    /*background-color: #cccccc;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+.websolflex {
+    display:flex;
+}
+.websolflexb {
+    display:flex;
+}
+
+
+@media screen and (max-width: 600px) {
+    .websol_top {
+        height: 60px;
+    }
+
+    .websolflex {
+        display:flex;
+        flex-direction: column;
+        
+    }
+    .websolflexb {
+        display:flex;
+        flex-direction: column-reverse;
+        
+    }
+
+
+}

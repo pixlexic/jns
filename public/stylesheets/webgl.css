@@ -1,0 +1,12 @@
+.webgl_top {
+    height: 120px;
+}
+
+.webgl_banner {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,77 @@
+<link rel='stylesheet' href='/stylesheets/home.css' />
+
+<div class="homeBox"  >
+
+<div class="homeDivA" >
+<h1>{{model.name}}</h1>
+<p>Welcome to {{model.description}}</p>
+
+ 
+       <h1>Express and socket.io</h1>
+       
+         <div id="user-list">bbb</div>
+       
+        <div id="news-list"></div>
+        <script src="javascripts/socket.io.js"></script>
+
+
+
+
+<button onclick="ss()" >buuuuu</button>
+
+        <script>
+            var socket = io('http://localhost:3000');
+
+               socket.on('list', function (data) {
+                var div = document.getElementById("news-list");
+                console.log("Rendering news : ",data);
+
+                
+                div.innerHTML += "<h3>" + data.msg+ ' <small>'+ "</small></h3><br>";
+                /*
+                for(var i = 0;i < data.length;i++){
+                    var newsItem = data[i];
+                    div.innerHTML += "<h3>" + newsItem.msg+ ' <small>'+ "</small></h3><br>";
+                }
+*/
+                //socket.emit('my other event', { my: 'data' });
+                
+           
+            });
+            
+            
+               
+               socket.on('users', function (data) {
+            	   
+            	   document.getElementById("user-list").innerHTML = "";
+            	   for(var i = 0;i < data.users.length;i++){
+            		   
+            		   if( data.users[i]){
+            	   document.getElementById("user-list").innerHTML += data.users[i].name;
+            		   }
+            	   
+            	   }
+               });
+               
+               
+               
+               
+            function ss(){
+         	   console.log("Reeeee");
+
+         	   socket.emit('getlist', { msg: 'hheeeeeyyyy' });
+            } 
+             
+        </script>
+
+
+</div>
+
+
+<div class="homeDivB"  >
+
+<h1>{{model.name}}</h1>
+<p>Welcome to {{model.description}}</p>
+
+</div>
+</div>

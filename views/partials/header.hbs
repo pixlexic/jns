@@ -1,0 +1,81 @@
+<div class="headerBox">
+    <!--  <img alt="owl-icon" src="/images/sys/icon-owl.png" class="headerIcon" /> -->
+    <div class="headerBoxa">
+    
+    <div  class="infoLinks" >info</div>
+    <div id="mlogo" class="infoLogo mainLogo"></div>
+
+    
+    </div>
+
+    <div class="headerBoxb" id="mmenubar" >
+     <button class="hambbutton config_hamb" onclick="setMenu()"></button>
+
+
+        <div class="headerMenuBox">
+            <div class="menuSlider" id="mslider"></div>
+            <div class="headerMenuBoxCon">
+                <!--  <a href="/" class="headerMenuBoxItem " ><div class="headerMenuBoxItems" >Home</div></a>
+    <a href="/webgl/" class="headerMenuBoxItem " ><div class="headerMenuBoxItems" >Web Apps</div></a>
+    <a href="/webgl/" class="headerMenuBoxItem " ><div class="headerMenuBoxItems" >WebGL</div></a>
+    <a href="/" class="headerMenuBoxItem " ><div class="headerMenuBoxItems" >Contact</div></a>  -->
+
+                {{#each model.menuItems}} {{#ifEquals id ../model.PageId}}
+                <a href="{{path}}" class="headerMenuBoxItem headerMenuBoxItemSelected" id="mselected" onmouseover="setSlider(this)" onmouseout="setSliderOut()">
+                    <div class="headerMenuBoxItems">{{id}}</div>
+                </a>
+                {{else}}
+                <a href="{{path}}" class="headerMenuBoxItem " onmouseover="setSlider(this)" onmouseout="setSliderOut()">
+                    <div class="headerMenuBoxItems">{{id}}</div>
+                </a>
+                {{/ifEquals }} {{/each}}
+
+            </div>
+        </div>
+
+
+
+   
+
+    </div>
+
+
+</div>
+
+
+
+<div class="modalBG" id= "modalbg" >
+
+</div>
+
+<div class="slide_menu" id="menumini" >
+ <div style="width:500px; border-bottom: solid 1px #ffffff;">
+ <button class="slide_menu_close config_ham" onclick="setMenuoff()"></button>
+ </div>
+ <div class="slide_menu_title">menu</div>
+ <div class="slide_menu_con">
+
+    {{#each model.menuItems}} {{#ifEquals id ../model.PageId}}
+                <button onclick="window.location.href = '{{path}}'" class="slide_mini_item" id="mselected" >
+                    <div class="">{{id}}</div>
+                </button>
+                {{else}}
+                <button onclick="window.location.href = '{{path}}'" class="slide_mini_item" >
+                    <div class="">{{id}}</div>
+                </button>
+                {{/ifEquals }} {{/each}}
+
+ </div>
+</div>
+
+
+
+
+
+<!--
+{{#ifEquals model.user null}}
+<div class="loginBox" > <button class="loginButton" onclick="window.location = '/login' ">login</button></div>
+{{else}}
+<div class="loginBox" >{{model.name}} </div>
+{{/ifEquals }}
+-->
