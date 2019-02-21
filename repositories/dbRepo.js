@@ -39,10 +39,12 @@ dbRepo.setUser = function(user,email,pass) {
 	 if (err) console.log(err);
 
 	 
-	 var request = new sql.Request();
+     var request = new sql.Request();
+     
      console.log( user);
      console.log( pass);
      console.log( email);
+
 	 // query to the database and get the records
 	  request.input('IN_USERNAME',  sql.VarChar(100), user )
 	  request.input('IN_PASSWORD',  sql.VarChar(100), pass )

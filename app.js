@@ -11,9 +11,10 @@ var bodyParser = require('body-parser');
 require('dotenv').config()
 
 // init enviromental variables
-var dB = require('./repositories/dbRepo');
+var dB = require('./repositories/dbMySQLRepo');
 dB.init();
-
+dB.connectTest();
+dB.getOrders();
 
 
 
@@ -32,6 +33,9 @@ require('./config/passport')(passport); // pass passport for configuration
 
 
 /* routes */
+
+var mapi = require('./routes/api');
+
 var admin = require('./routes/admin');
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -54,7 +58,10 @@ var app = express();
 
 
 
-app.use(require('body-parser').urlencoded({ extended: true }));
+//app.use(require('body-parser').urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(session);
 app.use(passport.initialize());
 app.use(passport.session());
@@ -90,6 +97,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.use('/api', mapi);
 
 app.use('/admin', admin);
 app.use('/', index);
