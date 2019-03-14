@@ -11,10 +11,10 @@ var bodyParser = require('body-parser');
 require('dotenv').config()
 
 // init enviromental variables
-var dB = require('./repositories/dbMySQLRepo');
-dB.init();
-dB.connectTest();
-dB.getOrders();
+//var dB = require('./repositories/dbMySQLRepo');
+//dB.init();
+//dB.connectTest();
+//dB.getOrders();
 
 
 
