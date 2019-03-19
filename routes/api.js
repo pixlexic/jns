@@ -6,7 +6,7 @@ var passport = require("passport");
 
 var mail = require('../services/mailing');
 
-var _db = require('../repositories/dbMySQLRepo');
+var _db = require('../repositories/dbSqlite');
 
 var _om = require('../models/jnsTest/jnsOrderModel');
 
@@ -37,10 +37,12 @@ router.post('/ordersP', async (req, res, next) => {
 console.log("params: " + req.query.bb);
 
     try {
-      //  let re =  await _db.getOrders(); 
+       let re =  await _db.getUserData(1); 
         
-let re = [];
+//let re = [];
 
+//_db.connectTest();
+/*
       let ords = new _om();
       ords.orderId = 0111111;
       ords.po = 'testpo1';
@@ -66,8 +68,8 @@ let re = [];
 
       re.push(ords);
       re.push(ordsb);
-
-      res.json({ data: re });   
+*/
+      res.json( re );   
       } catch (e) {
         //todo
         next(e) 
