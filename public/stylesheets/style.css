@@ -35,17 +35,35 @@ body {
     
 }
 
+
+.headerBG {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0;
+    height: 60px;
+    top: 0;
+}
+
+
+
 .headerBoxa {
     padding: 6px;
     height: 60px;
 }
 
+
+
 .headerBoxb {
-    position: relative;
+    position: fixed;
     background-color: #063963;
     padding: 0;
     height: initial;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
+    top: 65px;
+    width: 100%;
+    transition: top .5s, width .5s, height .5s;
+    /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); */
+
 }
 
 .headerBoxbx {
@@ -54,9 +72,9 @@ body {
     background-color: #063963;
     padding: 0;
     height: initial;
-    top: 0;
- 
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
+    top: 25px;
+    transition: top .5s, width .5s, height .5s;
+   /*  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); */
 }
 
 .headerBoxIn {
@@ -141,19 +159,23 @@ body {
 
 
 .infoLogo{
-    position: relative;
-    height:60px;
-    width:140px;
-    background-color:#ffffff;
+    position: fixed;
+    top: 6px;
+    left:10px;
+    height: 60px;
+    width: 140px;
+  /*  background-color: #ffffff; */
+    transition: top .5s, width .5s, height .5s;
 }
 
 .infoLogox{
     position: fixed;
-    height: 36px;
-    width:140px;
+    height: 15px;
+    width: 80px;
     z-index: 999;
-    top: 0;
-    background-color: #ffffff;
+     /*  background-color: #ffffff; */
+    top: 6px;
+    transition: top .5s, width .5s, height .5s;
 }
 
 
@@ -419,6 +441,7 @@ transition: width 0.5s;
         width: 130px;
         background-color: #ffffff;
         top: 0;
+        left:0;
         z-index: 999;
     }
     .infoLogox {
@@ -427,6 +450,7 @@ transition: width 0.5s;
         width: 130px;
         background-color: #ffffff;
         top: 0;
+        left:0;
         z-index: 999;
     }
     
@@ -445,9 +469,22 @@ transition: width 0.5s;
         overflow: hidden;
     }
 
-
+    .headerBG {
+        position: fixed;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 0;
+        height: 40px;
+        top: 0;
+    }
+    
     .headerBoxb {
-        min-height:50px ;
+        position: fixed;
+        width: 100%;
+        background-color: #063963;
+        padding: 0;
+        min-height: 50px;
+        top: 0;
     }
     .headerBoxbx {
         position: fixed;

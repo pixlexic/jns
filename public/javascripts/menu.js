@@ -43,7 +43,7 @@ checkScroll = function() {
 
     var _h = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if (_h > 70) {
+    if (_h > 10) {
         _menubar.className = "headerBoxbx";
         _logo.className = "infoLogox mainLogo";
     } else {
