@@ -1,25 +1,20 @@
+
 var apiUserData = function () {
 	
 	
     this.user = null;
     this.customer = null;
     this.orders = [];
-    this.status =[];
+    this.status = [];
         
-        
-        
-        
-        
-        
+    this.assets = [];
+
+
+
     }
     
     
-    
-    
-    
-    
-    
-    
+
     
     
     

@@ -32,6 +32,7 @@ body {
     width: 100%;
     top: 0px;
     z-index: 99999;
+    
 }
 
 .headerBoxa {
@@ -44,7 +45,7 @@ body {
     background-color: #063963;
     padding: 0;
     height: initial;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
 }
 
 .headerBoxbx {
@@ -54,7 +55,8 @@ body {
     padding: 0;
     height: initial;
     top: 0;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+ 
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
 }
 
 .headerBoxIn {
@@ -171,7 +173,9 @@ body {
 
 
 
-
+.basicTop {
+    height: 120px;
+}
 
 .mainTop {
 
@@ -400,7 +404,6 @@ transition: width 0.5s;
         /* height: 100px;*/
         /* border-bottom: solid 4px #ff6700;*/
         width: 100%;
-        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
         top: 0px;
         z-index: 99999;
     }

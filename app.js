@@ -43,6 +43,7 @@ var users = require('./routes/users');
 var webgl = require('./routes/webgl');
 var webapps = require('./routes/webapps');
 var websolutions = require('./routes/websolutions');
+var samples = require('./routes/samples');
 
 var hbs = require('hbs');
 var sharedsession = require("express-socket.io-session");
@@ -107,6 +108,7 @@ app.use('/users', users);
 app.use('/webgl', webgl);
 app.use('/webapps', webapps);
 app.use('/websolutions', websolutions);
+app.use('/samples', samples);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

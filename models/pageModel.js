@@ -9,7 +9,8 @@ var pageModel = function() {
         { id: 'Home', path: '/' },
         { id: 'Web Solutions', path: '/websolutions' },
         { id: 'Apps', path: '/webapps' },
-        { id: 'WebGL', path: '/webgl' },
+      //  { id: 'WebGL', path: '/webgl' },
+        { id: 'Samples', path: '/samples' },
         { id: 'Contact', path: '/contact' },
     ];
 
