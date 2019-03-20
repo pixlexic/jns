@@ -45,7 +45,7 @@ body {
     background-color: #063963;
     padding: 0;
     height: initial;
-   
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
 }
 
 .headerBoxbx {
@@ -447,7 +447,9 @@ transition: width 0.5s;
 
 
     .headerBoxb {
+	     position: relative;
         min-height:50px ;
+	     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
     }
     .headerBoxbx {
         position: fixed;
@@ -456,6 +458,7 @@ transition: width 0.5s;
         padding: 0;
         min-height:50px ;
         top: 0;
+	     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); 
     }
     .hambbutton {
         position: absolute;
