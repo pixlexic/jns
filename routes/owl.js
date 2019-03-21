@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
 	if(req.user){
 	   
 		m.user = req.user;
-	   m.name = req.user.email;
+	    m.name = req.user.email;
 	}
 	
   res.render('owl/index',  { model: m  , layout: '/layouts/layout.hbs' });

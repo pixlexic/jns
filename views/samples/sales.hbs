@@ -4,7 +4,11 @@
 
 
 <div class="mainContainer" style="position:relative; padding-bottom: 30px;"  align="center">
+<div style="max-width:1200px; " >
+
+
 sales
+{{um.user.username}}
 
 
 
@@ -13,5 +17,25 @@ sales
 
 
 
+<div>
 
+ {{#each um.orders}}
+<button style="display:flex;">
+<div style="flex:1 1 auto" >{{orderid}}</div>
+<div style="flex:1 1 auto" >{{po}}</div>
+<div style="flex:1 1 auto" >{{customerid}}</div>
+<div style="flex:1 1 auto" >{{status}}</div>
+
+</button >
+{{/each}}
+
+
+
+</div>
+
+
+
+
+
+</div>
 </div>

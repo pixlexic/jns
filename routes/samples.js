@@ -4,6 +4,10 @@ var app = express();
 
 var helpers = require('../services/helpers');
 var pdfService = require('../services/pdfService');
+var _db = require('../repositories/dbSqlite');
+
+
+var _om = require('../models/jnsTest/jnsOrderModel');
 
 var pageModel = require('../models/pageModel.js');
 
@@ -26,7 +30,7 @@ function getBreadcrumbs(req, res, next) {
 /* GET index page. */
 router.get('/', getBreadcrumbs, function(req, res, next) {
 
-    pdfService.test();
+   // pdfService.test();
 
 
     var m = new pageModel();
@@ -40,13 +44,19 @@ router.get('/', getBreadcrumbs, function(req, res, next) {
 
 
 /* GET index page. */
-router.get('/sales', getBreadcrumbs, function(req, res, next) {
+router.get('/sales', getBreadcrumbs, async function(req, res, next) {
+
+
+    let re = await _db.getUserData(1); 
+
+console.log(re);
+console.log('xxx');
 
     var m = new pageModel();
     m.PageId = 'Samples';
     m.breadCrumb = req.breadcrumbs;
 
-    res.render('samples/sales', { model: m, layout: '/layouts/layout.hbs' });
+    res.render('samples/sales', { model: m, um : re,  layout: '/layouts/layout.hbs' });
 });
 
 

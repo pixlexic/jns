@@ -34,7 +34,7 @@ router.get('/orders', async (req, res, next) => {
 /* POST test */
 router.post('/ordersP', async (req, res, next) => {
 
-console.log("params: " + req.query.bb);
+console.log("params: " + req.query);
 
     try {
        let re =  await _db.getUserData(1); 
