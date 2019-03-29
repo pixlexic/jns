@@ -1,0 +1,24 @@
+<div class="h_box" id="mmenubar" align="center">
+<div class="h_menuspace" id="mmenuspace" ></div>
+
+<div style="display: flex;" >
+
+<div style=" flex: 1 1 auto;" >
+<div id="mlogo" class="infoLogo mainLogo"></div>
+</div>
+<div style=" flex: 1 1 auto;" >
+<div class="h_menu" id="mmenu">
+
+  {{#each model.menuItems}}
+ <a href="{{path}}" class="h_menubutton" >{{id}}</a>
+ {{/each}}
+
+</div>
+
+</div>
+
+<div style=" flex: 1 1 auto; min-width: 200px;" ></div>
+
+</div>
+
+</div>

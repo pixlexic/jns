@@ -9,6 +9,41 @@ body {
     height: 100%;
 }
 
+
+
+
+
+
+button:focus {
+    outline: 0;
+}
+
+input,
+button,
+submit {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contentBox {
     padding: 0;
 }
@@ -20,6 +55,82 @@ body {
     left: 0;
     right: 0;
 }
+
+
+
+
+
+.h_box {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: #313131;
+    height:115px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+
+    transition: height 0.5s;
+
+}
+
+.h_boxb {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: #313131;
+    height:40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+
+    transition: height 0.5s;
+}
+
+
+
+.h_menuspace {
+    height:45px;
+    transition: height 0.5s;
+}
+.h_menuspaceb {
+    height:0px;
+    transition: height 0.5s;
+}
+
+.h_menu {
+    position: relative;
+    display: inline-block;
+    border: solid 1px #545252;
+    /* max-width: 500px; */
+    padding: 10px 40px;
+    transition: padding 0.5s, border 1s;
+}
+.h_menub {
+    position: relative;
+    display: inline-block;
+    border: solid 1px #54525200;
+    padding: 0px 40px;
+    transition: padding 0.5s, border 1s ;
+}
+
+.h_menubutton {
+    display: inline-block;
+    text-decoration: none;
+    color: #8a8a8a !important;
+    margin: 5px 0px;
+    padding: 6px 10px;
+    cursor: pointer;
+
+    transition: background-color 0.5s, color 0.5s ;
+}
+
+.h_menubutton:hover {
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d4d4d4 !important;
+  
+  transition: background-color 0.5s, color 0.5s ;
+}
+
+
+
 
 .headerBox {
     position: absolute;
@@ -160,22 +271,18 @@ body {
 
 
 .infoLogo{
-    position: fixed;
-    top: 6px;
-    left:10px;
-    height: 60px;
-    width: 140px;
+
+    height: 65px;
+    width: 200px;
   /*  background-color: #ffffff; */
     transition: top .5s, width .5s, height .5s;
 }
 
 .infoLogox{
-    position: fixed;
-    height: 15px;
-    width: 80px;
+    height: 40px;
+    width: 115px;
     z-index: 999;
-     /*  background-color: #ffffff; */
-    top: 6px;
+    /* background-color: #ffffff; */
     transition: top .5s, width .5s, height .5s;
 }
 
@@ -245,21 +352,7 @@ body {
     background-size: contain;
 }
 
-button:focus {
-    outline: 0;
-}
 
-input,
-button,
-submit {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
 
 
 /* unvisited link */
@@ -294,7 +387,7 @@ a:active {
 .mainLogo {
 
 
-	background-image: url("/images/sys/logox.svg");
+	background-image: url("/images/sys/logow.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -480,21 +573,12 @@ transition: width 0.5s;
     }
     
     .headerBoxb {
-<<<<<<< HEAD
-        position: fixed;
-        width: 100%;
-        background-color: #063963;
-        padding: 0;
-        min-height: 50px;
-        top: 0;
-=======
 	    position: relative;
     background-color: #063963;
 	    
     padding: 0;
         min-height:50px ;
 	    
->>>>>>> ee82057bfbac31a2bb445ad6d25108082080f952
     }
     .headerBoxbx {
         position: fixed;

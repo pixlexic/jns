@@ -9,6 +9,9 @@ var _menuMini = null;
 window.onload = function(e) {
 
     _menubar = document.getElementById("mmenubar");
+    _menuspace = document.getElementById("mmenuspace");
+    _menu = document.getElementById("mmenu");
+
     _slider  = document.getElementById("mslider");
 
     _logo = document.getElementById("mlogo");
@@ -44,10 +47,14 @@ checkScroll = function() {
     var _h = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (_h > 10) {
-        _menubar.className = "headerBoxbx";
+        _menubar.className = "h_boxb";
+        _menuspace.className = "h_menuspaceb";
+        _menu.className = "h_menub";
         _logo.className = "infoLogox mainLogo";
     } else {
-        _menubar.className = "headerBoxb";
+        _menubar.className = "h_box";
+        _menuspace.className = "h_menuspace";
+        _menu.className = "h_menu";
         _logo.className = "infoLogo mainLogo";
     }
 
