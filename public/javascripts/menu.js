@@ -23,10 +23,7 @@ window.onload = function(e) {
     _modalbg.addEventListener("transitionend", modelTransEnd);
 
 
-    document.addEventListener('touchend', bubbleStop, false);
-    document.addEventListener('touchmove', bubbleStop, false);
-    document.addEventListener('touchend', bubbleStop, false);
-
+  
 
     var so = document.getElementById('mselected');
     _selectedmenu = so;
@@ -35,15 +32,6 @@ window.onload = function(e) {
 };
 
 
-
-var bubbleStop = function(e) {
-    // If you need polyfill for .closest(), see: https://stackoverflow.com/a/35294561/395910
-    // Example of a parentSelector
-    // var parentSelector = '#parentElement';
-    if(e.target.closest(parentSelector)){
-      e.preventDefault();
-    }
-  };
 
 
 window.onscroll = function() {
@@ -118,11 +106,13 @@ setSlider = function(ob) {
 
 
 
-
+var freezeVp = function(e) {
+    e.preventDefault();
+};
 
 
 setMenu = function(){
-
+    document.body.addEventListener("touchmove", freezeVp, false);
     document.body.style.overflow = 'hidden';
    // _modalbg.style.display = 'block';
    _modalbg.style.right = '0px';
@@ -145,6 +135,7 @@ setMenu = function(){
 
 setMenuoff = function(){
 
+    document.body.removeEventListener("touchmove", freezeVp, false);
     document.body.style.overflow = 'auto';
     //_menuMini.style.width= '0px';
     _modalbg.style.opacity = "0";
