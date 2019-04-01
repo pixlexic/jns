@@ -1,4 +1,4 @@
-<div class="h_box" id="mmenubar" align="center">
+<div class="h_box mainmenubg" id="mmenubar" align="center">
 <div class="h_menuspace" id="mmenuspace" ></div>
 
 <div style="display: flex;" >
@@ -18,7 +18,38 @@
 </div>
 
 <div style=" flex: 1 1 auto; min-width: 200px;" ></div>
+ 
+</div>
+   <button class="hambbutton config_hamb" onclick="setMenu()"></button>
 
+   
 </div>
 
+
+
+
+<div class="modalBG" id= "modalbg" onclick="setMenuoff()" ></div>
+
+<div class="slide_menu" id="menumini" >
+ <div style="   
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    height: 78px;">
+ <button class="slide_menu_close config_ham" onclick="setMenuoff()"></button>
+ </div>
+ <div class="slide_menu_title">menu</div>
+ <div class="slide_menu_con">
+
+    {{#each model.menuItems}} {{#ifEquals id ../model.PageId}}
+                <button onclick="window.location.href = '{{path}}'" class="slide_mini_item" id="mselected" >
+                    <div class="">{{id}}</div>
+                </button>
+                {{else}}
+                <button onclick="window.location.href = '{{path}}'" class="slide_mini_item" >
+                    <div class="">{{id}}</div>
+                </button>
+                {{/ifEquals }} {{/each}}
+
+ </div>
 </div>

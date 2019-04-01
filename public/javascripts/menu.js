@@ -47,12 +47,12 @@ checkScroll = function() {
     var _h = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (_h > 10) {
-        _menubar.className = "h_boxb";
+        _menubar.className = "h_boxb mainmenubg";
         _menuspace.className = "h_menuspaceb";
         _menu.className = "h_menub";
         _logo.className = "infoLogox mainLogo";
     } else {
-        _menubar.className = "h_box";
+        _menubar.className = "h_box mainmenubg";
         _menuspace.className = "h_menuspace";
         _menu.className = "h_menu";
         _logo.className = "infoLogo mainLogo";

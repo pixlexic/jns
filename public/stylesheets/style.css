@@ -384,6 +384,19 @@ a:active {
 
 
 
+
+.mainmenubg {
+
+
+	background-image: url("/images/sys/bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+
+}
+
+
 .mainLogo {
 
 
@@ -399,7 +412,7 @@ a:active {
 .config_ham {
 
 	background-color: #aaaaaa;
-	background-image: url("/images/sys/ham-01.svg");
+	background-image: url("/images/sys/ham-01x.svg");
 	background-size: 30px 30px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -410,7 +423,7 @@ a:active {
 .config_hamb {
 
 	background-color: #aaaaaa;
-	background-image: url("/images/sys/ham-01b.svg");
+	background-image: url("/images/sys/ham-01x.svg");
 	background-size: 30px 30px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -447,24 +460,21 @@ a:active {
         transition: opacity 0.5s;
 }
 .slide_menu{
-position:fixed;
-top:0px;
-bottom:0px;
-right:-5px;
-width:0px;
-border-left: solid 3px #ffffff;
-background-color: #063963;
-overflow: hidden;
-
-z-index: 999999;
-transition: width 0.5s;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: -5px;
+    width: 0px;
+    background-color: #2f2f2f;
+    overflow: hidden;
+    z-index: 999999;
+    transition: width 0.5s;
 
 }
 
 .slide_menu_con{
     position:  relative;
     width: 300px;
-    background-color: #ffffff;
     overflow: auto;
 
  
@@ -473,7 +483,7 @@ transition: width 0.5s;
     .slide_menu_close{
         position: relative;
         display: inline-block;
-        height: 60px;
+        height: 78px;
         width: 50px;
 
         background-color: #808080;
@@ -484,8 +494,9 @@ transition: width 0.5s;
    .slide_menu_title{
     display: block;
     /* vertical-align: top; */
-    padding: 12px 0;
-    color: #ffffff;
+    padding: 2px 0;
+    color: #a5a5a5;
+    background-color: #636363;
     font-size: 20px;
     text-align: center;
     width: 300px;
@@ -495,13 +506,13 @@ transition: width 0.5s;
 
 
 .slide_mini_item{
-
     position: relative;
+    color: #cccccc;
     display: block;
-    padding: 10px;
+    padding: 17px 10px;
     font-size: 25px;
     width: 100%;
-    border-bottom: solid 2px #ecebeb;
+    border-bottom: solid 1px #5f5f5f;
 }
 
 
@@ -510,7 +521,67 @@ transition: width 0.5s;
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+
+
+
+
+
+    .h_box {
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background-color: #313131;
+        height:40px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    
+        transition: height 0.5s;
+    
+    }
+    
+    .h_boxb {
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background-color: #313131;
+        height:40px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    
+        transition: height 0.5s;
+    }
+    
+    
+    
+    .h_menuspace {
+        height:0px;
+        transition: height 0.5s;
+    }
+    .h_menuspaceb {
+        height:0px;
+        transition: height 0.5s;
+    }
+
+
+
+    .h_menu {
+        position: relative;
+        display: none;
+        border: solid 1px #545252;
+        /* max-width: 500px; */
+        padding: 10px 40px;
+        transition: padding 0.5s, border 1s;
+    }
+    .h_menub {
+        position: relative;
+        display: none;
+        border: solid 1px #54525200;
+        padding: 0px 40px;
+        transition: padding 0.5s, border 1s ;
+    }
+
+
+
+
     .headerBox {
         position: fixed;
         background-color: #ffffff;
@@ -531,18 +602,18 @@ transition: width 0.5s;
 
     .infoLogo{
         position: absolute;
-        height: 50px;
+        height: 35px;
         width: 130px;
-        background-color: #ffffff;
+
         top: 0;
         left:0;
         z-index: 999;
     }
     .infoLogox {
         position: absolute;
-        height: 50px;
+        height: 35px;
         width: 130px;
-        background-color: #ffffff;
+
         top: 0;
         left:0;
         z-index: 999;
@@ -593,9 +664,12 @@ transition: width 0.5s;
         position: absolute;
         display: inline-block;
         right: 20px;
-        background-color: #ffffff;
-        height: 50px;
+        top: 3px;
+        background-color: rgba(255, 255, 255, 0);
+        height: 34px;
         width: 50px;
+        border: solid 1px #504f4f;
+        border-radius: 4px;
     }
 
     .main_txt {
