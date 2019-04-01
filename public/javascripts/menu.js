@@ -23,7 +23,9 @@ window.onload = function(e) {
     _modalbg.addEventListener("transitionend", modelTransEnd);
 
 
-
+    document.addEventListener('touchend', bubbleStop, false);
+    document.addEventListener('touchmove', bubbleStop, false);
+    document.addEventListener('touchend', bubbleStop, false);
 
 
     var so = document.getElementById('mselected');
