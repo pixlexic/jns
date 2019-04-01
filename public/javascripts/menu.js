@@ -36,6 +36,16 @@ window.onload = function(e) {
 
 
 
+var bubbleStop = function(e) {
+    // If you need polyfill for .closest(), see: https://stackoverflow.com/a/35294561/395910
+    // Example of a parentSelector
+    // var parentSelector = '#parentElement';
+    if(e.target.closest(parentSelector))
+      e.preventDefault();
+  });
+
+
+
 window.onscroll = function() {
 
     //_menubar.innerHTML = _h;
