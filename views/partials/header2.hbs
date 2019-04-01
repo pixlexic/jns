@@ -30,8 +30,18 @@
 
 <div class="modalBG" id= "modalbg" onclick="setMenuoff()" ></div>
 
+<div class="sld_menu" id="menumini" >
+
+  {{#each model.menuItems}} 
+                <button onclick="window.location.href = '{{path}}'" class="sld_button menB" style='top:{{times @index  60 50}}px; right:{{times @index  -100 -400}}px;'  id="mselected" >
+                    <div class="" >{{id}} </div>
+                </button>
+  {{/each}}
+
+</div>
+<!-- 
 <div class="slide_menu" id="menumini" >
- <div style="   
+ <div style="    
     width: 500px;
     margin: 0;
     padding: 0;
@@ -52,4 +62,6 @@
                 {{/ifEquals }} {{/each}}
 
  </div>
+-->
+
 </div>

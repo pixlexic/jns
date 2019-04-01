@@ -68,6 +68,7 @@ modelTransEnd = function() {
 if (  _modalbg.style.opacity == 0){
     //_modalbg.style.display = 'none';
     _modalbg.style.right = '100%';
+    _menuMini.style.width= '0px';
 }
 
 
@@ -76,11 +77,16 @@ if (  _modalbg.style.opacity == 0){
 
 setSliderOut = function() {
 
+    
+
+
+    /*
     if (_selectedmenu != null && _slider != null) {
         _slider.style.left = (_selectedmenu.getBoundingClientRect().left - 170) + 'px';
         _slider.style.width = _selectedmenu.getBoundingClientRect().width + 'px';
         // alert(ob.offsetWidth);
     }
+    */
 };
 
 
@@ -88,10 +94,13 @@ setSliderOut = function() {
 setSlider = function(ob) {
 
 
+
+
+/*
     _slider.style.left = (ob.getBoundingClientRect().left - 170) + 'px';
     _slider.style.width = ob.getBoundingClientRect().width + 'px';
     // alert(ob.offsetWidth);
-
+*/
 };
 
 
@@ -105,8 +114,17 @@ setMenu = function(){
     document.body.style.overflow = 'hidden';
    // _modalbg.style.display = 'block';
    _modalbg.style.right = '0px';
-    _modalbg.style.opacity = "0.5";
-    _menuMini.style.width= '300px';
+    _modalbg.style.opacity = "0.85";
+    _menuMini.style.width= '100%';
+
+   var elems = document.getElementsByClassName("menB");
+
+   for(let i = 0; i < elems.length; i++){
+   
+      let r = elems[i].offsetRight
+      elems[i].style.right = '10px';
+   }
+   
 
 
 }
@@ -116,7 +134,16 @@ setMenu = function(){
 setMenuoff = function(){
 
     document.body.style.overflow = 'auto';
-    _menuMini.style.width= '0px';
+    //_menuMini.style.width= '0px';
     _modalbg.style.opacity = "0";
+
+
+    var elems = document.getElementsByClassName("menB");
+
+    for(let i = 0; i < elems.length; i++){
+    
+       let r = elems[i].offsetRight
+       elems[i].style.right = (-400 - ( i * 120)) + 'px';
+    }
 
 }

@@ -40,6 +40,21 @@ hbs.registerHelper('for', function(from, to, incr, block) {
 
 
 
+
+
+
+
+hbs.registerHelper('times', function(a, b, c=0) {
+    var num = 0;
+   
+    num = c + (a * b);
+    return num;
+});
+
+
+
+
+
 }
 
 module.exports = hbsConfig;

@@ -455,10 +455,50 @@ a:active {
         opacity:0;
         background-color: #000000;
         overflow: hidden;
-        
         z-index: 999995;  
         transition: opacity 0.5s;
 }
+
+
+
+
+.sld_menu {
+    right: 0px;
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    z-index: 9999999;
+    overflow: hidden;
+    overflow-y: scroll;
+   /* background-color: aliceblue;*/
+    width: 100%;
+}
+
+
+
+
+.sld_button {
+
+    position: absolute;
+    background-color: rgba(60, 58, 58, 0.83);
+    overflow: hidden;
+    z-index: 999999;
+    width: 300px;
+    font-size: 25px;
+    color: #e0e0e0;
+    padding: 10px;
+    border: solid 1px #888181;
+    transition: right 1s;
+    /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.55); */
+
+
+}
+
+
+
+
+
+
 .slide_menu{
     position: fixed;
     top: 0px;
