@@ -97,15 +97,15 @@ dbRepoSqlite.getUserCustomerData = function (_ad, _db) {
     return new Promise(function (resolve, reject) {
 
 
-        let sql_customer = `SELECT *  FROM "main"."customers" where id = ?`;
-        let _id = _ad.user.id;
+        let sql_customer = `SELECT *  FROM "main"."customers" `;
+        //let _id = _ad.user.id;
 
-        _db.get(sql_customer, [_id], (err, row) => {
+        _db.all(sql_customer, [], (err, rows) => {
             if (err) {
                 throw err;
             }
             // console.log(rows);
-            _ad.customer = row;
+            _ad.customers = rows;
             resolve(dbRepoSqlite.getUserStatusData(_ad, _db));
         });
 

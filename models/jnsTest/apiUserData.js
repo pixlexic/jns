@@ -3,7 +3,7 @@ var apiUserData = function () {
 	
 	
     this.user = null;
-    this.customer = null;
+    this.customers = [];
     this.orders = [];
     this.status = [];
         
