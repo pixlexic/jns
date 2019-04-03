@@ -28,16 +28,23 @@
 
 
 
-<div class="modalBG" id= "modalbg" onclick="setMenuoff()" ></div>
+<div class="modalBG" id= "modalbg"  ></div>
 
-<div class="sld_menu" id="menumini" >
 
+
+<div class="sld_menu" id="menumini" onclick="setMenuoff()" >
+
+    <div  class="sld_menuheader menA" >menu
+ <button class="sld_hambbutton closewSVG" onclick="setMenuoff()"></button>
+
+</div>
+<div class="sld_menucon ">
   {{#each model.menuItems}} 
-                <button onclick="window.location.href = '{{path}}'" class="sld_button menB" style='top:{{times @index  60 50}}px; right:{{times @index  -100 -400}}px;'  id="mselected" >
+                <button onclick="window.location.href = '{{path}}'" class="sld_button menB" style='top:{{times @index  60 0}}px; right:{{times @index  -100 -400}}px;'  id="mselected" >
                     <div class="" >{{id}} </div>
                 </button>
   {{/each}}
-
+</div>
 </div>
 <!-- 
 <div class="slide_menu" id="menumini" >

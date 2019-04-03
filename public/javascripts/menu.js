@@ -19,16 +19,21 @@ window.onload = function(e) {
     _modalbg  = document.getElementById("modalbg");
     _menuMini =  document.getElementById("menumini");
 
+    _isMenu = false;
+
 
     _modalbg.addEventListener("transitionend", modelTransEnd);
+      window.addEventListener("resize", wresize);
 
-
-  
+    modelTransEnd();
 
     var so = document.getElementById('mselected');
     _selectedmenu = so;
     setSlider(so);
     checkScroll();
+
+   // document.body.addEventListener("load", checkScroll);
+
 };
 
 
@@ -37,7 +42,9 @@ window.onload = function(e) {
 window.onscroll = function() {
 
     //_menubar.innerHTML = _h;
+    if( _menubar != null){
     checkScroll();
+    }
 
 };
 
@@ -106,28 +113,35 @@ setSlider = function(ob) {
 
 
 
-var freezeVp = function(e) {
-    e.preventDefault();
-};
 
 
 setMenu = function(){
-    document.body.addEventListener("touchmove", freezeVp, false);
+  //  document.body.addEventListener("touchmove", freezeVp, false);
     document.body.style.overflow = 'hidden';
    // _modalbg.style.display = 'block';
+   
+   _isMenu = true;
+   
    _modalbg.style.right = '0px';
     _modalbg.style.opacity = "0.85";
     _menuMini.style.width= '100%';
 
+   var elemsA = document.getElementsByClassName("menA");
    var elems = document.getElementsByClassName("menB");
 
    for(let i = 0; i < elems.length; i++){
    
       let r = elems[i].offsetRight
-      elems[i].style.right = '10px';
+      elems[i].style.right = '40px';
+      elems[i].style.width = (window.innerWidth - 80) + 'px';
    }
    
-
+   for(let i = 0; i < elemsA.length; i++){
+   
+ 
+    elemsA[i].style.top = '100px';
+  
+ }
 
 }
 
@@ -135,12 +149,14 @@ setMenu = function(){
 
 setMenuoff = function(){
 
-    document.body.removeEventListener("touchmove", freezeVp, false);
+   // document.body.removeEventListener("touchmove", freezeVp, false);
     document.body.style.overflow = 'auto';
     //_menuMini.style.width= '0px';
     _modalbg.style.opacity = "0";
 
+    _isMenu = false;
 
+    var elemsA = document.getElementsByClassName("menA");
     var elems = document.getElementsByClassName("menB");
 
     for(let i = 0; i < elems.length; i++){
@@ -148,5 +164,23 @@ setMenuoff = function(){
        let r = elems[i].offsetRight
        elems[i].style.right = (-400 - ( i * 120)) + 'px';
     }
+
+    for(let i = 0; i < elemsA.length; i++){
+   
+        elemsA[i].style.top = '-100px';
+      
+     }
+
+
+}
+
+
+wresize = function(){
+
+if(_isMenu) {
+
+    setMenu();
+}
+
 
 }

@@ -420,6 +420,19 @@ a:active {
 
 }
 
+
+.closewSVG {
+
+	background-color: #aaaaaa;
+	background-image: url("/images/sys/closew.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+
+}
+
+
 .config_hamb {
 
 	background-color: #aaaaaa;
@@ -465,16 +478,40 @@ a:active {
 .sld_menu {
     right: 0px;
     position: fixed;
-    top: 50px;
+    top: 0px;
     bottom: 0px;
     z-index: 9999999;
     overflow: hidden;
-    overflow-y: scroll;
+    
    /* background-color: aliceblue;*/
     width: 100%;
 }
 
 
+.sld_menuheader {
+    position: absolute;
+    color: #b1b1b1;
+    top: -100px;
+    width: 100%;
+    font-size: 20px;
+    border-bottom: solid 1px #565656;
+    text-align: center;
+    z-index: 9999999;
+    transition: top 1s;
+}
+
+
+
+
+.sld_menucon {
+
+    position: absolute; 
+    top:135px; 
+    bottom:0px; 
+    width:100%; 
+    overflow-y: scroll;
+
+}
 
 
 .sld_button {
@@ -495,7 +532,17 @@ a:active {
 }
 
 
-
+.sld_hambbutton {
+    position: absolute;
+    display: inline-block;
+    bottom: 13px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 40px;
+    width: 75px;
+    border: solid 1px #504f4f;
+    border-radius: 4px;
+}
 
 
 
