@@ -9,7 +9,7 @@ var apiUserData = function () {
         
     this.assets = [];
 
-
+    this.notices = [];
 
     }
     

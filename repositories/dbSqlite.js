@@ -106,7 +106,7 @@ dbRepoSqlite.getUserCustomerData = function (_ad, _db) {
             }
             // console.log(rows);
             _ad.customers = rows;
-            resolve(dbRepoSqlite.getUserStatusData(_ad, _db));
+            resolve(dbRepoSqlite.getNoticeData(_ad, _db));
         });
 
    
@@ -115,6 +115,29 @@ dbRepoSqlite.getUserCustomerData = function (_ad, _db) {
 
 }
 
+
+
+
+dbRepoSqlite.getNoticeData = function (_ad, _db) {
+
+    return new Promise(function (resolve, reject) {
+
+
+        let sql_customer = `select * FROM "main"."notices" order by createddate ASC `;
+
+        _db.all(sql_customer, [], (err, rows) => {
+            if (err) {
+                throw err;
+            }
+            _ad.notices = rows;
+            resolve(dbRepoSqlite.getUserStatusData(_ad, _db));
+        });
+
+   
+    })
+
+
+}
 
 
 
